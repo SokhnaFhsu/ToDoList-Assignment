@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f77fa1; /* Light pink background */
+    color: #333;
+    padding-left: 20px; /* Adjust this to match the left alignment of both the list and the form */
+    padding-right: 20px;
+}
+
+header {
+    background-color: #f77fa1;
+    color: #5c2a4d;
+    padding: 10px ;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #812f62;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.todo-list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.todo-item {
+     background-color: #eebde2;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-text {
+    flex-grow: 1;
+}
+
+.item-title {
+    font-weight: bold;
+}
+
+.item-description {
+    font-size: 0.9em;
+}
+
+.item-remove {
+    margin-left: 10px;
+}
+
+.remove-btn {
+    background-color: #9b4d95;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.remove-btn:hover {
+    background-color: #f77fa1;
+}
+/* Add Item Form */
+.add-item-form {
+    max-width: 400px;
+    margin-left: 40px;
+    padding: 20px;
+    background-color: #eebde2;
+    border-radius: 8px;
+
+}
+
+.add-item-form input[type="text"],
+.add-item-form input[type="submit"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eebde2;
+    border-radius: 4px;
+}
+
+.add-item-form input[type="submit"] {
+    background-color: #812f62;
+    color: white;
+    cursor: pointer;
+    width: 20%;
+}
+
+.add-item-form input[type="submit"]:hover {
+    background-color: #9b4d95;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    header, .add-item-form {
+        padding: 10px;
+    }
+
+    .add-item-form input[type="submit"],
+    .remove-btn {
+        width: auto; /* Adjust width for smaller devices */
+    }
+
+    .todo-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
